@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Container from './Components/Container';
+import ResultsBox from './Components/Result';
+import InputBox from './Components/Input';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Converter extends React.Component {
+  state = { value: 100, conversionType: "d2b" };
+
+  decimalToBinary() {
+    return Number(this.state.value).toString(2);
+  }
+
+  binaryToDecimal() {
+    return parseInt(this.state.value, 2);
+  }
+
+  render() {
+    return (
+      <Container>
+        <InputBox
+          state={this.state}
+          radioHandler={conversionType => this.setState({ conversionType })}
+          inputHandler={value => this.setState({ value })}
+        />
+        <ResultsBox
+          value={this.state.conversionType === "d2b" ? this.decimalToBinary() : this.binaryToDecimal()}
+        />
+      </Container>
+    );
+  }
 }
 
-export default App;
+export default Converter;
