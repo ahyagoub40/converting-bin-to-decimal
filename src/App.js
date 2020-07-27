@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Container from './Components/Container';
 import ResultsBox from './Components/Result';
 import InputBox from './Components/Input';

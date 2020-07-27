@@ -1,0 +1,48 @@
+$black: #000000;
+$grey:  #A9A9A9;
+$blue:  #CAEBF2;
+$red:   #FF3B3F;
+$white: #EFEFEF;
+
+
+body {
+	background-color: $white;
+	color: $red;
+	font-family: 'Lato', sans-serif;
+}
+
+.converter {
+	margin-top: 15px;
+}
+.result {
+	word-wrap: break-word;
+	font-size: 56px;
+}
+.inputForm {
+	background-color: $blue;
+	height: 50px;
+	font-size: 25px;
+}
+
+.radio-inline {
+	font-size: 16px;
+}
+
+.title {
+	margin-bottom: 20px;
+	font-family: 'Lobster', sans-serif;
+}
+
+input[type=radio] {
+	margin-right:8px;
+}
+input[type=number] {
+	outline: none;
+	border: 0;
+	color: $red;
+	border-radius: 100px;
+}
+
+input[type=number]:focus {
+	box-shadow: 0 0 5px $red;
+}
