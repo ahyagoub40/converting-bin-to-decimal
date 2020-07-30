@@ -1,5 +1,4 @@
 import React from 'react';
-
 const InputBox = props => {
   return (
     <form className="text-center">

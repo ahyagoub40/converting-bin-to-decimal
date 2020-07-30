@@ -1,5 +1,4 @@
 import React from 'react'
-
 const ResultsBox = props => {
   return (
     <div className="text-center result">
